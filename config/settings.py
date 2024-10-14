@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gev-%829blyz$b&+y8&mpo&cd0tid4j!103naqme%gs@-iyf3w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -94,10 +94,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'db_m2p4_aul9',
-        'USER': 'usuario_teste',
-        'PASSWORD': '5CaBJztFtKfN4sScc2YjjT7GgZCpFY4h',
-        'HOST': 'dpg-cnna707109ks73fvjg80-a.oregon-postgres.render.com',
+        'NAME': 'gerencialdb',
+        'USER': 'gerencialdb_user',
+        'PASSWORD': 'FBsOh4BPfbC03eq0Oxx7nztYxS0lxZca',
+        'HOST': 'dpg-cs5chol6l47c73f3gas0-a.oregon-postgres.render.com',
         'PORT': '5432',
         'OPTIONS': {
             'options' : '-c search_path=public,django'
@@ -105,10 +105,10 @@ DATABASES = {
     },
     'django': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'db_m2p4_aul9',
-        'USER': 'usuario_teste',
-        'PASSWORD': '5CaBJztFtKfN4sScc2YjjT7GgZCpFY4h',
-        'HOST': 'dpg-cnna707109ks73fvjg80-a.oregon-postgres.render.com',
+        'NAME': 'gerencialdb',
+        'USER': 'gerencialdb_user',
+        'PASSWORD': 'FBsOh4BPfbC03eq0Oxx7nztYxS0lxZca',
+        'HOST': 'dpg-cs5chol6l47c73f3gas0-a.oregon-postgres.render.com',
         'PORT': '5432',
         'OPTIONS': {
             'options' : '-c search_path=django'
@@ -160,7 +160,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # CORS SETTINGS
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = ['https://gerencial-fe.vercel.app', 'http://localhost:3000', 'http://127.0.0.1:3000']
 CORS_ALLOW_CREDENTIALS = True
 
 LOGGING = {
